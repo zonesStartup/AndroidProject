@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".SignUp2">
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="First Name"/>
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_below="@id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Last Name"/>
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_below="@id/lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="phone Number"/>
+
+    <Spinner
+        android:id="@+id/spinnerArea"
+        android:layout_below="@id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/area_arrays"
+        android:prompt="@string/area_prompt" />
+
+
+    <Spinner
+        android:id="@+id/spinnerUniversity"
+        android:layout_below="@id/spinnerArea"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/university_arrays"
+        android:prompt="@string/university_prompt" />
+
+
+    <Spinner
+        android:id="@+id/spinnerCollage"
+        android:layout_below="@id/spinnerUniversity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/collage_arrays"
+        android:prompt="@string/collage_prompt" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupGander"
+        android:layout_below="@id/spinnerCollage"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="male"/>
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="female"/>
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/signUp"
+        android:layout_below="@id/radioGroupGander"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textAllCaps="false"
+        android:text="Sign Up"/>
+</RelativeLayout>

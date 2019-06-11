@@ -11,6 +11,7 @@ public class UserClass {
     private String UserId;
     private String FirstName;
     private String LastName;
+    private String phoneNumber;
     private String UserEmail;
     private String UserPassword;
     private String Location;
@@ -62,6 +63,14 @@ public class UserClass {
 
     public void setLastName(String lastName) {
         LastName = lastName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getUserEmail() {
@@ -153,13 +162,26 @@ public class UserClass {
         }
     }
 
-    public boolean getCurrentUser(){
-        if (FirebaseHelper.currentUser==null){
-            result= false;
-        }
-        else {
-            result = true;
-        }
-        return result;
+    //get current user id
+    public String getCurrentUserId(){
+
+        return FirebaseHelper.currentUser.getUid();
     }
+
+    //get current user email
+    public String getCurrentUserEmail(){
+        return FirebaseHelper.currentUser.getEmail();
+    }
+
+    //create user
+    public boolean setUser(UserClass userClass){
+     result = FirebaseHelper.setUser(userClass);
+     if (result){
+         return true;
+     }
+     else {
+         return false;
+     }
+    }
+
 }

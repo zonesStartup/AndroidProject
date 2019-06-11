@@ -10,4 +10,10 @@ public class GoToAny_Activity {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
+
+    protected   void Go_to_SignUp2(Context context){
+        Intent intent=new Intent(context,SignUp2.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
 }

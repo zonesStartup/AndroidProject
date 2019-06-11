@@ -45,7 +45,7 @@ public class SignUp extends AppCompatActivity {
                     if (result) {
                         dialogue.dismissProgressDialog();
                         Toast.makeText(SignUp.this, "createUserWithEmail:success", Toast.LENGTH_LONG).show();
-                         goToAny_activity.Go_to_MainActivity(SignUp.this);
+                         goToAny_activity.Go_to_SignUp2(SignUp.this);
                         finish();
                     } else {
                         dialogue.dismissProgressDialog();
@@ -56,12 +56,4 @@ public class SignUp extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if(user.getCurrentUser()==true){
-            goToAny_activity.Go_to_MainActivity(getApplicationContext());
-            finish();
-        }
-    }
 }

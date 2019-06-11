@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">Zone</string>
+
+    <string name="area_prompt">Choose a area</string>
+
+    <string name="university_prompt">Choose a area</string>
+
+
+    <string name="collage_prompt">Choose a area</string>
+
+
+    <string-array name="area_arrays">
+        <item>Cairo</item>
+        <item>Giza</item>
+        <item>Domuate</item>
+        <item>Minia</item>
+    </string-array>
+
+    <string-array name="university_arrays">
+        <item>Cairo</item>
+        <item>Giza</item>
+        <item>Domuate</item>
+        <item>Minia</item>
+    </string-array>
+
+
+    <string-array name="collage_arrays">
+        <item>engineering</item>
+        <item>computer and information system</item>
+        <item>commerce</item>
+        <item>sciences</item>
+        <item>pharmacy</item>
+    </string-array>
+
+    <string name="firstnameerror">Enter Valid First Name</string>
+    <string name="lastnameerror">Enter Valid Last Name</string>
+    <string name="emailerror">Enter Valid Email</string>
+    <string name="passworderror">Enter Some Password</string>
+    <string name="mobileerror">Enter Valid Mobile Number</string>
+
 </resources>
